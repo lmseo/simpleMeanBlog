@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <span><a routerLink="/" mat-button>Angular Blog</a></span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+
+  <button mat-button [matMenuTriggerFor]="menu">Admin</button>
+  <mat-menu #menu="matMenu">
+    <a
+      mat-menu-item
+      routerLink="/create"
+      [routerLinkActive]="['mat-button', 'mat-accent']"
+    >
+      Create Blog
+    </a>
+  </mat-menu>
+</mat-toolbar>
